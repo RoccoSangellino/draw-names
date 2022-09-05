@@ -1,5 +1,5 @@
-export interface Person {
+export interface Participant {
   id: string;
   name: string;
-  excludes: Person[];
+  excludes: Participant[];
 }
