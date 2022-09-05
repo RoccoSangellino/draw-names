@@ -1,4 +1,3 @@
-//store.ts
 import { defineStore } from 'pinia';
 import { Participant } from '@/types';
 import { v4 as randomUUID } from 'uuid';
