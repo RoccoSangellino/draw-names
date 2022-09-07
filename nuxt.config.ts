@@ -8,5 +8,9 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true,
   },
-  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss'],
+  modules: [
+    '@pinia/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxt-hero-icons/solid/nuxt',
+  ],
 });
