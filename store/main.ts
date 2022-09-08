@@ -58,4 +58,6 @@ export const useStore = defineStore<'main', State, {}, Actions>({
   getters: {
     getParticipants: (state) => state.participants,
   },
+
+  persist: true,
 });

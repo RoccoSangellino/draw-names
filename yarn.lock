@@ -311,6 +311,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@headlessui/vue@^0.0.0-insiders.d2a0bdb":
+  version "0.0.0-insiders.d2a0bdb"
+  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-0.0.0-insiders.d2a0bdb.tgz#5d4bb1cb89e4b33359d544d08336c773d18ef3d2"
+  integrity sha512-pzaAIhTPnS2yqRJo+bxnrzEw08HzZPjEUJEefiqsI0pXZ4/Nxv5aqiNRxQ37k23IOm/bV6f7UE8ycaK9cJgFQg==
+
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.4.tgz#01e7366e57d2ad104feea63e72248f22015c520c"
@@ -441,6 +446,13 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@nuxt-hero-icons/solid@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxt-hero-icons/solid/-/solid-1.0.1.tgz#4c032f58567426dd6fc2286ee6d3f9326a1a415c"
+  integrity sha512-3oM0F2qSzBioP0WceYXoIOIYIpWFPSa7duPHDhdN/tNsc9fTu5HgespSdpd045/DNHlPW2t7n2eDhBMI4fMszw==
+  dependencies:
+    heroicons "git+https://github.com/tailwindlabs/heroicons.git#master"
 
 "@nuxt/devalue@^2.0.0":
   version "2.0.0"
@@ -3222,6 +3234,10 @@ hash-sum@^2.0.0:
   resolved "https://registry.yarnpkg.com/hash-sum/-/hash-sum-2.0.0.tgz#81d01bb5de8ea4a214ad5d6ead1b523460b0b45a"
   integrity sha512-WdZTbAByD+pHfl/g9QSsBIIwy8IT+EsPiKDs0KNX+zSHhdDLFKdZu0BQHljvO+0QI/BasbMSUa8wYNCZTvhslg==
 
+"heroicons@git+https://github.com/tailwindlabs/heroicons.git#master":
+  version "2.0.10"
+  resolved "git+https://github.com/tailwindlabs/heroicons.git#56246254bc143ea9b4e940497030f182ba4e42c4"
+
 hookable@^5.2.2, hookable@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/hookable/-/hookable-5.3.0.tgz#eabdd7bef9e04cb3505c49153b669d5d53974e7d"
@@ -4630,6 +4646,11 @@ pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
+
+pinia-plugin-persistedstate@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-2.1.1.tgz#584c416cdc278689ae9d49483621ec96dcb7d6ef"
+  integrity sha512-HUgsU5IRtM75eAQiIqzT3p1oPEuYH1/B2ipTMU++yE+FV0LkHaBswdKXs0RMWYCmugO8s62oxLTh/N1dLNp+5A==
 
 pinia@>=2.0.19, pinia@^2.0.21:
   version "2.0.21"

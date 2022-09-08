@@ -13,10 +13,11 @@ const store = useStore();
         <div v-for="person in store.participants" :key="person.id">
           <label :for="person.id">Name</label>
           <input
+            :id="person.id"
+            v-model="person.name"
             class="border border-black"
             type="text"
             name="participant"
-            :id="person.id"
           />
           <button @click="store.removeParticipant(person.id)" type="button">
             X
