@@ -3,24 +3,29 @@ import { useStore } from '@/store/main';
 import { Participant } from '@/types';
 
 interface Pair {
-  me: Participant;
-  them: Participant;
+  giftGiver: Participant;
+  giftReceiver: Participant;
 }
 
 const pairs = await useAsyncData<Pair[]>('pairs', () => {
   const store = useStore();
   const alreadyPicked: { [key: string]: boolean } = {};
-  const generate = (participant: Participant) => {
+
+  const generatePair = (participant: Participant): Pair => {
     const { id, excludes } = participant;
     let selectedPerson: Participant | undefined;
+    const excludesIndex: { [key: string]: boolean } = {
+      [participant.id]: true,
+    };
+
+    excludes.forEach((person) => {
+      excludesIndex[person.id] = true;
+    });
+
     while (!selectedPerson) {
       const randomIndex = Math.floor(Math.random() * store.participants.length);
       const person = store.participants[randomIndex];
-      if (
-        id === person.id ||
-        alreadyPicked[person.id] ||
-        excludes.find((p) => p.id === person.id)
-      ) {
+      if (alreadyPicked[person.id] || excludesIndex[person.id]) {
         continue;
       }
 
@@ -28,15 +33,15 @@ const pairs = await useAsyncData<Pair[]>('pairs', () => {
       selectedPerson = person;
     }
 
-    return selectedPerson;
+    return {
+      giftGiver: participant,
+      giftReceiver: selectedPerson,
+    };
   };
 
-  const pairs = store.participants.map((person: Participant) => {
-    return {
-      me: person,
-      them: generate(person),
-    };
-  });
+  const pairs = store.participants.map((person: Participant) =>
+    generatePair(person)
+  );
   return Promise.resolve(pairs);
 });
 </script>
@@ -47,8 +52,8 @@ const pairs = await useAsyncData<Pair[]>('pairs', () => {
     <div>
       <ul>
         <li v-for="(pair, index) in pairs.data.value" :key="index">
-          <span>{{ pair.me.name }}</span> -
-          <span>{{ pair.them.name }}</span>
+          <span>{{ pair.giftGiver.name }}</span> -
+          <span>{{ pair.giftReceiver.name }}</span>
         </li>
       </ul>
     </div>
