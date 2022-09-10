@@ -7,7 +7,7 @@
       <div
         class="flex flex-col items-center justify-center text-center lg:text-left lg:items-start"
       >
-        <h1 class="my-6 font-semibold text-slate-900">
+        <h1 class="my-6 font-semibold text-white">
           Gift giving made easy with
           <span class="text-primary-600 font-extrabold">Secret Selection</span>
         </h1>
