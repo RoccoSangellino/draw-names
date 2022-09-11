@@ -12,10 +12,10 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: ({ colors }) => ({
-      bodyBg: '#1B73D3',
+      bodyBg: '#2f6db3',
       primary: {
-        default: '#f45a6b',
-        600: '#f45a6b',
+        default: '#f04b4c',
+        600: '#f04b4c',
       },
       sunny: '#F5F474',
       orange: '#FFAA47',
@@ -37,7 +37,7 @@ module.exports = {
       red: colors.red,
       // orange: colors.orange,
       amber: colors.amber,
-      yellow: '#fad830',
+      yellow: '#f7cf4f',
       lime: colors.lime,
       green: colors.green,
       emerald: colors.emerald,

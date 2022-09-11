@@ -6,7 +6,7 @@
     <div class="absolute -z-10 w-[250px] right-[-80px] top-[-66px]">
       <img src="../assets/images/balloons.png" alt="" />
     </div>
-    <div class="bg-yellow p-2 mt-16 rounded-lg">
+    <div class="bg-yellow p-2 mt-16 rounded-lg flex flex-col">
       <div>
         <img src="../assets/images/banner.png" alt="" class="" />
       </div>
