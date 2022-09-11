@@ -1,5 +1,7 @@
 <template>
-  <div class="h-screen w-screen flex items-center justify-center">
+  <div
+    class="flex items-center justify-center min-h-screen sm:min-h-[50vh] py-0 px-2 sm:px-12"
+  >
     <!-- <div class="party-banner">
       <img src="../assets/images/party-banner.png" alt="" />
     </div>
@@ -7,13 +9,17 @@
       <img src="../assets/images/balloons.png" alt="" />
     </div> -->
     <div
-      class="rounded-3xl p-6 flex justify-center items-center lg:max-w-6xl bg-yellow-default"
+      class="rounded-3xl p-6 flex justify-center items-center lg:max-w-6xl bg-yellow-default flex-col lg:flex-row"
     >
-      <img src="../assets/images/banner.png" alt="" class="lg:order-2 w-full" />
-      <div class="">
+      <img
+        src="../assets/images/banner.png"
+        alt=""
+        class="lg:order-2 lg:w-full w-[400px]"
+      />
+      <div class="sm:w-[400px] md:w-auto">
         <h1 class="my-6 font-semibold text-slate-800">
           Gift giving made easy with
-          <span class="text-primary-600 font-extrabold">Secret Selection</span>
+          <div class="text-primary-600 font-extrabold">Secret Selection</div>
         </h1>
         <p class="w-4/6 text-lg text-slate-800 opacity-75">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi

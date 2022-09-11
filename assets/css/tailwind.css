@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter.ttf') format('ttf');
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +11,7 @@
 @layer base {
   body {
     @apply bg-bodyBg;
+    margin: 0;
   }
   h1 {
     @apply text-3xl;
