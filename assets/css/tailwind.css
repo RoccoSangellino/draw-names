@@ -22,3 +22,27 @@
     @apply text-primary-600;
   }
 }
+
+.balloons {
+  z-index: -1;
+  position: absolute;
+  top: -66px;
+  right: 82px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.balloons img {
+  height: 450px;
+}
+
+.party-banner {
+  position: absolute;
+  z-index: -1;
+  top: -128px;
+  left: -31px;
+}
+
+.party-banner img {
+  height: 450px;
+}

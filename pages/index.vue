@@ -1,26 +1,28 @@
 <template>
-  <div>
+  <div class="h-screen w-screen flex items-center justify-center">
+    <!-- <div class="party-banner">
+      <img src="../assets/images/party-banner.png" alt="" />
+    </div>
+    <div class="balloons">
+      <img src="../assets/images/balloons.png" alt="" />
+    </div> -->
     <div
-      class="flex flex-col max-w-6xl px-4 mx-auto lg:flex-row sm:px-6 lg:px-8"
+      class="rounded-3xl p-6 flex justify-center items-center lg:max-w-6xl bg-yellow-default"
     >
       <img src="../assets/images/banner.png" alt="" class="lg:order-2 w-full" />
-      <div
-        class="flex flex-col items-center justify-center text-center lg:text-left lg:items-start"
-      >
-        <h1 class="my-6 font-semibold text-white">
+      <div class="">
+        <h1 class="my-6 font-semibold text-slate-800">
           Gift giving made easy with
           <span class="text-primary-600 font-extrabold">Secret Selection</span>
         </h1>
-        <p class="w-4/6 text-lg text-gray-600">
+        <p class="w-4/6 text-lg text-slate-800 opacity-75">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
           suscipit voluptas eius? Sunt quis dolor libero, error quo maxime
           exercitationem.
         </p>
-        <div
-          class="flex flex-col w-full px-12 lg:space-x-3 lg:flex-row lg:px-0"
-        >
+        <div class="inline-block">
           <a
-            href="https://flurly.com/p/tailmars"
+            href="/participants"
             class="flex items-center justify-center px-6 py-3 mt-6 text-lg font-medium text-white rounded-md bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600"
           >
             <span>Get Started</span>
