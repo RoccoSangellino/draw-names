@@ -11,45 +11,5 @@
 @layer base {
   body {
     @apply bg-bodyBg;
-    margin: 0;
   }
-  h1 {
-    @apply text-3xl;
-  }
-  h2 {
-    @apply text-2xl;
-  }
-  h3 {
-    @apply text-xl;
-  }
-  nav a {
-    @apply block;
-  }
-  nav a:hover {
-    @apply text-primary-600;
-  }
-}
-
-.balloons {
-  z-index: -1;
-  position: absolute;
-  top: -66px;
-  right: 82px;
-  transform: rotate(45deg);
-  z-index: -1;
-}
-
-.balloons img {
-  height: 450px;
-}
-
-.party-banner {
-  position: absolute;
-  z-index: -1;
-  top: -128px;
-  left: -31px;
-}
-
-.party-banner img {
-  height: 450px;
 }

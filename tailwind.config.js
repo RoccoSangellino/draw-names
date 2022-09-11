@@ -37,9 +37,7 @@ module.exports = {
       red: colors.red,
       // orange: colors.orange,
       amber: colors.amber,
-      yellow: {
-        default: '#fad830',
-      },
+      yellow: '#fad830',
       lime: colors.lime,
       green: colors.green,
       emerald: colors.emerald,
