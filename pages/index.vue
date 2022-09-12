@@ -6,16 +6,18 @@
     <div class="absolute -z-10 w-[250px] right-[-80px] top-[-66px]">
       <img src="../assets/images/balloons.png" alt="" />
     </div>
-    <div class="bg-yellow p-2 mt-16 rounded-lg flex flex-col">
-      <div>
-        <img src="../assets/images/banner.png" alt="" class="" />
+    <div class="bg-yellow p-2 md:p-4 rounded-lg flex flex-col gap-8">
+      <div class="flex justify-center">
+        <img src="../assets/images/present-banner.png" alt="" class="" />
       </div>
       <div class="">
-        <h1 class="text-2xl font-semibold text-slate-800">
+        <h1
+          class="text-2xl md:text-4xl md:leading-tight font-semibold text-slate-800"
+        >
           Gift giving made easy with
           <div class="text-primary-600 font-bold">Secret Selection</div>
         </h1>
-        <p class="mt-4 mb-4 text-slate-800 opacity-75">
+        <p class="mt-4 mb-4 md:text-xl text-slate-800 opacity-75">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
           suscipit voluptas eius? Sunt quis dolor libero, error quo maxime
           exercitationem.
