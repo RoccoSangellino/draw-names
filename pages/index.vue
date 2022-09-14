@@ -3,29 +3,38 @@
     <div class="absolute -z-10 w-[394px] left-[-80px] top-[-130px]">
       <img src="../assets/images/party-banner.png" alt="" />
     </div>
-    <div class="absolute -z-10 w-[250px] right-[-80px] top-[-66px]">
-      <img src="../assets/images/balloons.png" alt="" />
+    <div
+      class="absolute -z-10 w-[250px] right-[-35px] top-[-66px] transform rotate-45"
+    >
+      <img class="h-[400px]" src="../assets/images/balloons.png" alt="" />
     </div>
-    <div class="bg-yellow p-2 md:p-4 rounded-lg flex flex-col gap-8">
-      <div class="flex justify-center">
-        <img src="../assets/images/present-banner.png" alt="" class="" />
+    <div
+      class="bg-yellow p-2 md:p-4 lg:p-8 xl:p-16 rounded-lg flex flex-col gap-8 lg:flex-row"
+    >
+      <div class="flex justify-center lg:order-2 lg:min-w-[45%]">
+        <img
+          class="lg:hidden"
+          src="../assets/images/present-banner.png"
+          alt=""
+        />
+        <img class="hidden lg:block" src="../assets/images/banner.png" alt="" />
       </div>
       <div class="">
         <h1
-          class="text-2xl md:text-4xl md:leading-tight font-semibold text-slate-800"
+          class="text-2xl xlg:text-5xl md:text-4xl md:leading-tight xlg:leading-snug font-semibold text-slate-800"
         >
           Gift giving made easy with
           <div class="text-primary-600 font-bold">Secret Selection</div>
         </h1>
-        <p class="mt-4 mb-4 md:text-xl text-slate-800 opacity-75">
+        <p class="mt-4 mb-4 md:text-xl xl:text-2xl text-slate-800 opacity-75">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
           suscipit voluptas eius? Sunt quis dolor libero, error quo maxime
           exercitationem.
         </p>
-        <div class="">
+        <div class="lg:inline-block">
           <a
             href="/participants"
-            class="flex items-center justify-center px-6 py-3 mt-6 text-lg font-medium text-white rounded-md bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600"
+            class="flex items-center justify-center px-6 py-3 mt-6 text-lg xl:text-2xl font-medium text-white rounded-md bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600"
           >
             <span>Get Started</span>
             <svg
