@@ -1,3 +1,14 @@
+<template>
+  <div>
+    <ul>
+      <li v-for="(pair, index) in pairs.data.value" :key="index">
+        <span>{{ pair.giftGiver.name }}</span> -
+        <span>{{ pair.giftReceiver.name }}</span>
+      </li>
+    </ul>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { useStore } from '@/store/main';
 import { Participant } from '@/types';
@@ -45,17 +56,3 @@ const pairs = await useAsyncData<Pair[]>('pairs', () => {
   return Promise.resolve(pairs);
 });
 </script>
-
-<template>
-  <div>
-    <h1>Generate</h1>
-    <div>
-      <ul>
-        <li v-for="(pair, index) in pairs.data.value" :key="index">
-          <span>{{ pair.giftGiver.name }}</span> -
-          <span>{{ pair.giftReceiver.name }}</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</template>

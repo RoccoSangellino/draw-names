@@ -1,15 +1,7 @@
 <template>
   <div>
-    <div class="absolute -z-10 w-[394px] left-[-80px] top-[-130px]">
-      <img src="../assets/images/party-banner.png" alt="" />
-    </div>
     <div
-      class="absolute -z-10 w-[250px] right-[-35px] top-[-66px] transform rotate-45"
-    >
-      <img class="h-[400px]" src="../assets/images/balloons.png" alt="" />
-    </div>
-    <div
-      class="bg-yellow p-2 md:p-4 lg:p-8 xl:p-16 rounded-lg flex flex-col gap-8 lg:flex-row"
+      class="bg-yellow-900 p-2 md:p-4 lg:p-8 xl:p-16 rounded-lg flex flex-col gap-8 lg:flex-row"
     >
       <div class="flex justify-center lg:order-2 lg:min-w-[45%]">
         <img

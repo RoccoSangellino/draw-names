@@ -1,21 +1,6 @@
-<script setup lang="ts">
-import { useStore } from '@/store/main';
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOptions,
-  ListboxOption,
-} from '@headlessui/vue';
-const store = useStore();
-
-const filteredOptions = (id: string) => {
-  return store.participants.filter((person) => person.id !== id);
-};
-</script>
-
 <template>
   <div>
-    <div class="fixed top-16 w-72">
+    <div>
       <ul>
         <li
           class="mb-16"
@@ -93,3 +78,18 @@ const filteredOptions = (id: string) => {
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useStore } from '@/store/main';
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOptions,
+  ListboxOption,
+} from '@headlessui/vue';
+const store = useStore();
+
+const filteredOptions = (id: string) => {
+  return store.participants.filter((person) => person.id !== id);
+};
+</script>
