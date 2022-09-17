@@ -7,7 +7,7 @@ interface State {
 }
 
 interface Actions {
-  addParticipant: () => void;
+  addParticipant: (numParticipants?: number) => void;
   removeParticipant: (id: string) => void;
 }
 
@@ -15,38 +15,28 @@ export const useStore = defineStore<'main', State, {}, Actions>({
   id: 'main',
   state: () => {
     return {
-      participants: [
-        {
-          name: '',
-          id: randomUUID(),
-          excludes: [],
-        },
-        {
-          name: '',
-          id: randomUUID(),
-          excludes: [],
-        },
-        {
-          name: '',
-          id: randomUUID(),
-          excludes: [],
-        },
-        {
-          name: '',
-          id: randomUUID(),
-          excludes: [],
-        },
-      ],
+      participants: [],
     };
   },
 
   actions: {
-    addParticipant() {
-      (this.participants as Participant[]).push({
-        name: '',
-        id: randomUUID(),
-        excludes: [],
-      });
+    addParticipant(numParticipants) {
+      console.log(numParticipants);
+      if (numParticipants) {
+        for (let i = 0; i < numParticipants; i++) {
+          (this.participants as Participant[]).push({
+            name: '',
+            id: randomUUID(),
+            excludes: [],
+          });
+        }
+      } else {
+        (this.participants as Participant[]).push({
+          name: '',
+          id: randomUUID(),
+          excludes: [],
+        });
+      }
     },
     removeParticipant(id: string) {
       this.participants = (this.participants as Participant[]).filter(
@@ -61,3 +51,24 @@ export const useStore = defineStore<'main', State, {}, Actions>({
 
   persist: true,
 });
+
+// {
+//   name: '',
+//   id: randomUUID(),
+//   excludes: [],
+// },
+// {
+//   name: '',
+//   id: randomUUID(),
+//   excludes: [],
+// },
+// {
+//   name: '',
+//   id: randomUUID(),
+//   excludes: [],
+// },
+// {
+//   name: '',
+//   id: randomUUID(),
+//   excludes: [],
+// },

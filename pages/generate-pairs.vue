@@ -5,7 +5,7 @@
     >
       Secret Selection
     </h1>
-    <TabGroup>
+    <TabGroup :selectedIndex="selectedTab" @change="changeTab">
       <TabList class="flex space-x-1 rounded-xl bg-yellow-300/50 p-1">
         <Tab
           v-for="category in categories"
@@ -36,7 +36,7 @@
             'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
           ]"
         >
-          <component :is="category.component" />
+          <component :is="category.component" @updateTab="updateSelectedTab" />
         </TabPanel>
       </TabPanels>
     </TabGroup>
@@ -55,6 +55,16 @@ interface TabOption {
   step: number;
   component: Component;
 }
+
+const selectedTab = ref(0);
+
+const changeTab = (index: number) => {
+  selectedTab.value = index;
+};
+
+const updateSelectedTab = (index: number) => {
+  selectedTab.value = index;
+};
 
 const categories = shallowRef<TabOption[]>([
   {
