@@ -8,18 +8,20 @@
     <TabGroup :selectedIndex="selectedTab" @change="changeTab">
       <TabList class="flex space-x-1 rounded-xl bg-yellow-300/50 p-1">
         <Tab
-          v-for="category in categories"
+          v-for="(category, index) in categories"
+          :class="{
+            'cursor-not-allowed': isTabDisabled(index),
+          }"
           as="template"
           :key="category.step"
           v-slot="{ selected }"
+          :disabled="isTabDisabled(index)"
         >
           <button
             :class="[
-              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-blue-700',
+              'w-full rounded-lg py-2.5 text-sm font-medium leading-5',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2',
-              selected
-                ? 'bg-white shadow'
-                : 'text-bodyBg hover:bg-yellow-900/[0.55] hover:font-bold',
+              tabClassNames(selected, index),
             ]"
           >
             {{ category.title }}
@@ -49,12 +51,32 @@ import type { Component } from 'vue';
 import Participants from '@/components/Participants.vue';
 import ParticipantExclusions from '@/components/ParticipantExclusions.vue';
 import GeneratePairs from '@/components/GeneratePairs.vue';
+import { useStore } from '@/store/main';
+const store = useStore();
 
 interface TabOption {
   title: string;
   step: number;
   component: Component;
 }
+
+const isTabDisabled = (index: number) => {
+  return index > 0 && !store.participants.length;
+};
+
+const tabClassNames = (selected: boolean, index: number) => {
+  if (isTabDisabled(index)) {
+    return 'text-gray-400';
+  }
+
+  const classNames = 'text-blue-700';
+
+  if (selected) {
+    return `${classNames} bg-white shadow`;
+  }
+
+  return `${classNames} text-bodyBg hover:bg-yellow-900/[0.55] hover:font-bold`;
+};
 
 const selectedTab = ref(0);
 
