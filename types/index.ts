@@ -3,3 +3,8 @@ export interface Participant {
   name: string;
   excludes: Participant[];
 }
+
+export interface Pair {
+  giftGiver: Participant;
+  giftReceiver: Participant;
+}
