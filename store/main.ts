@@ -21,7 +21,6 @@ export const useStore = defineStore<'main', State, {}, Actions>({
 
   actions: {
     addParticipant(numParticipants) {
-      console.log(numParticipants);
       if (numParticipants) {
         for (let i = 0; i < numParticipants; i++) {
           (this.participants as Participant[]).push({
