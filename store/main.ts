@@ -50,24 +50,3 @@ export const useStore = defineStore<'main', State, {}, Actions>({
 
   persist: true,
 });
-
-// {
-//   name: '',
-//   id: randomUUID(),
-//   excludes: [],
-// },
-// {
-//   name: '',
-//   id: randomUUID(),
-//   excludes: [],
-// },
-// {
-//   name: '',
-//   id: randomUUID(),
-//   excludes: [],
-// },
-// {
-//   name: '',
-//   id: randomUUID(),
-//   excludes: [],
-// },
