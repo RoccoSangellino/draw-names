@@ -48,6 +48,7 @@
 <script setup lang="ts">
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue';
 import type { Component } from 'vue';
+import JSConfetti from 'js-confetti';
 import Participants from '@/components/Participants.vue';
 import ParticipantExclusions from '@/components/ParticipantExclusions.vue';
 import GeneratePairs from '@/components/GeneratePairs.vue';
@@ -105,4 +106,8 @@ const categories = shallowRef<TabOption[]>([
     component: GeneratePairs,
   },
 ]);
+
+onMounted(() => {
+  window.jsConfetti = new JSConfetti();
+});
 </script>

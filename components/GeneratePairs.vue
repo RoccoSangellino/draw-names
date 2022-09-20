@@ -1,11 +1,30 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="(pair, index) in pairs.data.value" :key="index">
-        <span>{{ pair.giftGiver.name }}</span> -
-        <span>{{ pair.giftReceiver.name }}</span>
-      </li>
-    </ul>
+  <div class="bg-white shadow-md rounded my-6">
+    <table class="min-w-max w-full table-auto">
+      <thead>
+        <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+          <th class="py-3 px-6 text-left">Gift Giver</th>
+          <th class="py-3 px-6 text-left">Gift Receiver</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-600 text-sm font-light">
+        <tr
+          class="border-b border-gray-200 hover:bg-gray-100"
+          :class="{
+            'bg-gray-100': index % 2 !== 0,
+          }"
+          v-for="(pair, index) in pairs.data.value"
+          :key="index"
+        >
+          <td class="py-3 px-6 text-left whitespace-nowrap">
+            {{ pair.giftGiver.name }}
+          </td>
+          <td class="py-3 px-6 text-left whitespace-nowrap">
+            {{ pair.giftReceiver.name }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -54,5 +73,13 @@ const pairs = await useAsyncData<Pair[]>('pairs', () => {
     generatePair(person)
   );
   return Promise.resolve(pairs);
+});
+
+onMounted(() => {
+  window.jsConfetti.addConfetti({
+    emojis: ['🎁'],
+    emojiSize: 100,
+    confettiNumber: 30,
+  });
 });
 </script>
