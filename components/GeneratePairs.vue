@@ -36,7 +36,12 @@
 import { useStore } from '@/store/main';
 const store = useStore();
 const { data: pairs, pending } = await useLazyFetch('/api/generate-pairs', {
-  body: store.participants,
+  server: false,
+  initialCache: false,
+  body: {
+    participants: store.participants,
+    generateType: store.generateType,
+  },
   method: 'POST',
 });
 

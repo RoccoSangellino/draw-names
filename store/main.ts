@@ -1,21 +1,18 @@
 import { defineStore } from 'pinia';
-import { Participant } from '@/types';
+import { AppState, Participant } from '@/types';
 import { v4 as randomUUID } from 'uuid';
-
-interface State {
-  participants: Participant[];
-}
 
 interface Actions {
   addParticipant: (numParticipants?: number) => void;
   removeParticipant: (id: string) => void;
 }
 
-export const useStore = defineStore<'main', State, {}, Actions>({
+export const useStore = defineStore<'main', AppState, {}, Actions>({
   id: 'main',
   state: () => {
     return {
       participants: [],
+      generateType: 'private',
     };
   },
 
